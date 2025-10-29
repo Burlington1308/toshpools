@@ -129,3 +129,17 @@ body {
         z-index: 1001;
     }
 }
+
+/*main body*/
+.services {
+    width: 100%;
+    background: #1a1919;
+}
+
+.services h1 {
+    text-align: center;
+    color: #f5f5f5;
+    padding-top: 3rem;
+    font-size: clamp(2rem, 4rem, 3rem);
+    text-decoration: underline;
+}
