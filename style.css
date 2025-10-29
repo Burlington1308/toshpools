@@ -29,10 +29,13 @@ body {
 }
 
 .logo {
-    text-decoration: none;
-    color: #f5f5f5;
-    font-size: 3rem;
-    font-weight: 700;
+    height: 80%;
+    background-color: #f5f5f5;
+    border-radius: 50%;
+}
+
+.logo img {
+    height: inherit;
 }
 
 .navbar-menu {
@@ -46,6 +49,20 @@ body {
 
 .navbar-toggle {
     display: none;
+    cursor: pointer;
+    background: transparent;
+    border: none;
+    padding: 10px;
+}
+
+.navbar-toggle span {
+    height: 3px;
+    width: 25px;
+    background: #f5f5f5;
+    margin: 4px 0;
+    border-radius: 2px;
+    transition: all 0.3s ease;
+    display: block;
 }
 
 .navbar-menu li, .navbar-menu li a{
@@ -76,4 +93,39 @@ body {
     background: url('images/main-banner-resized.jpg') no-repeat center center/cover;
     height: 80vh;
     width: 100%;
+}
+
+/* responsive mobile */
+@media (max-width: 800px) {
+    .navbar-menu {
+        display: none;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 1.7rem !important;
+        position: absolute;
+        top: 0;
+        right: 0;
+        width: 250px;
+        height: 100vh;
+        padding: 3rem 1.5rem;
+        box-shadow: 0 10px 10px rgba(0, 0, 0, 0.5);
+        backdrop-filter: blur(10px);
+        background: rgba(41, 113, 247, 0.8);
+        transition: all 0.3s ease;
+        z-index: 1000;
+    }
+
+    .navbar-menu.active {
+        display: flex;
+        z-index: 1000;
+    }
+
+    .navbar-menu li {
+        margin: 15px 0;
+    }
+
+    .navbar-toggle {
+        display: block;
+        z-index: 1001;
+    }
 }
