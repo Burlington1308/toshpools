@@ -42,7 +42,14 @@
 }
 
 .bubble ul {
-    list-style: none;
+    list-style-position: inside;
+    list-style: circle;
     text-align: left;
     line-height: 1.5;
+}
+
+.list-items {
+    list-style-type: circle;
+    list-style: circle;
+    list-style-position: inside;
 }
